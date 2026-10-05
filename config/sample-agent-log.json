@@ -1,0 +1,10 @@
+{
+  "TimeGenerated": "2026-10-05T19:24:00Z",
+  "correlationId": "AGENT-EXAMPLE-UUID",
+  "agentName": "UserLookupAgent",
+  "user": "user@example.com",
+  "operation": "READ_USER",
+  "target": "https://graph.microsoft.com/v1.0/me",
+  "statusCode": 200,
+  "result": "SUCCESS"
+}

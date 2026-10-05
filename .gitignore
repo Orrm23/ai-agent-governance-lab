@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Secrets / credentials
+.env
+*.secret
+secrets/
+credentials/
+token_cache*
+msal_cache*
+
+# Runtime data
+agent-audit.jsonl
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

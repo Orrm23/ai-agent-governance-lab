@@ -1,0 +1,4 @@
+msal
+requests
+azure-identity
+azure-monitor-ingestion

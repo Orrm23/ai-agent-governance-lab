@@ -1,0 +1,35 @@
+{
+  "properties": {
+    "dataCollectionEndpointId": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.Insights/dataCollectionEndpoints/<DCE_NAME>",
+    "streamDeclarations": {
+      "Custom-AgentInvocation_CL": {
+        "columns": [
+          {"name": "TimeGenerated", "type": "datetime"},
+          {"name": "correlationId", "type": "string"},
+          {"name": "agentName", "type": "string"},
+          {"name": "user", "type": "string"},
+          {"name": "operation", "type": "string"},
+          {"name": "target", "type": "string"},
+          {"name": "statusCode", "type": "int"},
+          {"name": "result", "type": "string"}
+        ]
+      }
+    },
+    "destinations": {
+      "logAnalytics": [
+        {
+          "workspaceResourceId": "/subscriptions/<SUBSCRIPTION_ID>/resourceGroups/<RESOURCE_GROUP>/providers/Microsoft.OperationalInsights/workspaces/<WORKSPACE_NAME>",
+          "name": "<WORKSPACE_DESTINATION_NAME>"
+        }
+      ]
+    },
+    "dataFlows": [
+      {
+        "streams": ["Custom-AgentInvocation_CL"],
+        "destinations": ["<WORKSPACE_DESTINATION_NAME>"],
+        "transformKql": "source",
+        "outputStream": "Custom-AgentInvocation_CL"
+      }
+    ]
+  }
+}
